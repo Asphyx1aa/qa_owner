@@ -35,14 +35,12 @@ public class TestsConfigProvider {
         return config.browserSize();
     }
 
-    @Config.Key("isRemote")
-    @Config.DefaultValue("false")
-    public static Boolean isRemote() {
-        return config.isRemote();
+    public static String getEnv() {
+        return config.env();
     }
 
     public static String getServer() {
-        if(config.isRemote()) {
+        if(config.env().equals("remote")) {
             String username = getLogin();
             String password = getPassword();
             String wdhost = getHost();
