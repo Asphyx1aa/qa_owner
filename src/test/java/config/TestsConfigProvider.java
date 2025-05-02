@@ -36,7 +36,7 @@ public class TestsConfigProvider {
     }
 
     public static Boolean isRemote() {
-        return config.isRemote();
+        return System.getProperty("env", "local");
     }
 
     public static String getServer() {
