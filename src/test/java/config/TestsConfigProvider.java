@@ -1,6 +1,6 @@
 package config;
 
-import com.codeborne.selenide.Configuration;
+import org.aeonbits.owner.Config;
 import org.aeonbits.owner.ConfigFactory;
 
 public class TestsConfigProvider {
@@ -35,8 +35,10 @@ public class TestsConfigProvider {
         return config.browserSize();
     }
 
+    @Config.Key("isRemote")
+    @Config.DefaultValue("false")
     public static Boolean isRemote() {
-        return System.getProperty("env", "local");
+        return config.isRemote();
     }
 
     public static String getServer() {

@@ -27,6 +27,5 @@ public interface TestsBaseConfig extends Config {
     @DefaultValue("1920x1080")
     String browserSize();
 
-    @DefaultValue("false")
     Boolean isRemote();
 }
