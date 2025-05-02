@@ -8,7 +8,7 @@ public class OwnerTests extends TestBase {
     OwnerDocsPage ownerDocsPage = new OwnerDocsPage();
 
     @Test
-    @DisplayName("Проверяем наличие всех ссылок в разделе Getting Started")
+    @DisplayName("Проверяем наличие раздела Installation в разделе Getting Started")
     void gettingStartedSectionShouldContainLinks() {
         ownerDocsPage.openPage()
                 .checkLinksInGettingStarted();

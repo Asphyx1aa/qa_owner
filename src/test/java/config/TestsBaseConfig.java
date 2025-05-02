@@ -9,6 +9,15 @@ import org.aeonbits.owner.*;
 
 public interface TestsBaseConfig extends Config {
 
+    String login();
+
+    String password();
+
+    String wdhost();
+
+    @DefaultValue("https://matteobaccan.github.io")
+    String baseUrl();
+
     @DefaultValue("chrome")
     String browser();
 

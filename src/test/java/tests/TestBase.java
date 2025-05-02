@@ -10,7 +10,8 @@ public class TestBase {
 
     @BeforeAll
     static void testSetup() {
-        Configuration.baseUrl = "https://matteobaccan.github.io";
+        Configuration.holdBrowserOpen = true;
+        Configuration.baseUrl = TestsConfigProvider.getBaseUrl();
         Configuration.browserSize = TestsConfigProvider.getBrowserSize();
         Configuration.browserVersion = TestsConfigProvider.getBrowserVersion();
         Configuration.browser = TestsConfigProvider.getBrowser();

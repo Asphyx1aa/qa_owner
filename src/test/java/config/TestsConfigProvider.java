@@ -7,6 +7,22 @@ public class TestsConfigProvider {
 
     static TestsBaseConfig config = ConfigFactory.create(TestsBaseConfig.class);
 
+    public static String getLogin() {
+        return config.login();
+    }
+
+    public static String getPassword() {
+        return config.password();
+    }
+
+    public static String getHost() {
+        return config.wdhost();
+    }
+
+    public static String getBaseUrl() {
+        return config.baseUrl();
+    }
+
     public static String getBrowser() {
         return config.browser();
     }
@@ -25,9 +41,9 @@ public class TestsConfigProvider {
 
     public static String getServer() {
         if(config.isRemote()) {
-            String username = System.getProperty("login", null);
-            String password = System.getProperty("password", null);
-            String wdhost = System.getProperty("wdhost", null);
+            String username = getLogin();
+            String password = getPassword();
+            String wdhost = getHost();
 
             return "https://" + username + ":" + password + "@" + wdhost;
         } else {
