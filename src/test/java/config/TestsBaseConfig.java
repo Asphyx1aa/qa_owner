@@ -21,7 +21,7 @@ public interface TestsBaseConfig extends Config {
     @DefaultValue("chrome")
     String browser();
 
-    @DefaultValue("136.0")
+    @DefaultValue("128.0")
     String browserVersion();
 
     @DefaultValue("1920x1080")
