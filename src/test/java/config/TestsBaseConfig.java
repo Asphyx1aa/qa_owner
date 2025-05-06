@@ -9,24 +9,32 @@ import org.aeonbits.owner.*;
 
 public interface TestsBaseConfig extends Config {
 
-    String login();
+    @Key("login")
+    String getLogin();
 
-    String password();
+    @Key("password)")
+    String getPassword();
 
-    String wdhost();
+    @Key("host")
+    String getHost();
 
+    @Key("baseUrl")
     @DefaultValue("https://matteobaccan.github.io")
-    String baseUrl();
+    String getBaseUrl();
 
+    @Key("browser")
     @DefaultValue("chrome")
-    String browser();
+    String getBrowser();
 
+    @Key("browserVersion")
     @DefaultValue("128.0")
-    String browserVersion();
+    String getBrowserVersion();
 
+    @Key("browserSize")
     @DefaultValue("1920x1080")
-    String browserSize();
+    String getBrowserSize();
 
+    @Key("env")
     @DefaultValue("local")
-    String env();
+    String getEnv();
 }
